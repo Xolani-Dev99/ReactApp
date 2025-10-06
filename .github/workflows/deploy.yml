@@ -3,7 +3,7 @@ name: Deploy React App to Vercel
 on:
   push:
     branches:
-      - main  # or master, depending on your branch
+      - main  # Change if your branch is called 'master'
 
 jobs:
   deploy:
@@ -25,3 +25,4 @@ jobs:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-project-name: ${{ secrets.VERCEL_PROJECT_NAME }}
           vercel-args: '--prod'
+          working-directory: .  # Optional if root, but add if build is in a subfolder
