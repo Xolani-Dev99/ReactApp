@@ -3,7 +3,7 @@ name: Deploy React App to Vercel
 on:
   push:
     branches:
-      - main  # or master if that's your branch
+      - main  # or master, depending on your branch
 
 jobs:
   deploy:
