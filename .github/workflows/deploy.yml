@@ -3,7 +3,7 @@ name: Deploy React App to Vercel
 on:
   push:
     branches:
-      - main  # ✅ Use 'main' if your branch is named 'main'
+      - main  # or master if that's your branch
 
 jobs:
   deploy:
@@ -23,7 +23,5 @@ jobs:
         uses: amondnet/vercel-action@v25
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-project-name: ${{ secrets.VERCEL_PROJECT_NAME }}
           vercel-args: '--prod'
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-        env:
-          VERCEL_ORG_ID: dummy-org-id
